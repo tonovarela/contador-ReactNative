@@ -1,10 +1,12 @@
 import React from 'react'
-import { ContadorScreen, HolaMundoScreen } from './src/screens'
+import {   PositionScreen } from './src/screens'
+import { SafeAreaView } from 'react-native'
 
-
- export const App = () => {
-  return (    
-    <ContadorScreen />
+export const App = () => {
+  return (
+    <SafeAreaView style={{flex:1}}>
+      <PositionScreen/>
+    </SafeAreaView>
   )
 }
 
