@@ -8,17 +8,8 @@ interface Props {
 }
 
 export const Fab = ({ text, onPress, position = 'CENTER' }: Props) => {
-    const ios = () => {
-        <View style={[styles.fabLocation, stylePosition()]}>
-            <TouchableOpacity onPress={onPress} style={styles.fab}>
-                <View style={styles.fab}>
-                    <Text style={styles.fabText}>{text}</Text>
-                </View>
-            </TouchableOpacity>
-        </View>
-
-    }
-    const android = () => {
+    
+    const main = () => {
         return <View style={[styles.fabLocation, stylePosition()]}>
             <TouchableOpacity
                 activeOpacity={0.9}
@@ -46,12 +37,9 @@ export const Fab = ({ text, onPress, position = 'CENTER' }: Props) => {
     }
     return (
         <>
-            {Platform.OS === 'ios' ? ios() : android()}
+            {main()}
         </>
     );
-
-
-
 
 }
 
@@ -81,7 +69,7 @@ const styles = StyleSheet.create({
     },
     fabLocation: {
         position: 'absolute',
-        bottom: 25,
+        bottom: 10,
 
     },
     right: {

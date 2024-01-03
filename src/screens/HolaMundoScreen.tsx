@@ -8,7 +8,7 @@ export const HolaMundoScreen = () => {
             justifyContent: 'center',
         }}>
             <Text style={{ fontSize: 55, textAlign: "center" }}>
-                Desde aquí
+                Hola mundo!!
             </Text>
         </View>
     )
